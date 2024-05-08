@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://rsi0ph1kv6qw"]
+
+[ext_resource type="Texture2D" uid="uid://b436upe6vsq5c" path="res://assets/Castle4.png" id="1_bsfsh"]
+[ext_resource type="Script" path="res://Castle.cs" id="1_xqlt1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnf1a"]
+size = Vector2(170, 237)
+
+[node name="Castle" type="Area2D"]
+script = ExtResource("1_xqlt1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_bsfsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_jnf1a")
+
+[node name="TargetPoint" type="Marker2D" parent="."]
