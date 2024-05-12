@@ -1,16 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://clw5epgj16dst"]
+[gd_scene load_steps=10 format=3 uid="uid://clw5epgj16dst"]
 
 [ext_resource type="Script" path="res://Mob2.cs" id="1_j5ffi"]
 [ext_resource type="Texture2D" uid="uid://cj51wj31qfwef" path="res://assets/Dog1.png" id="1_ut3ce"]
+[ext_resource type="Texture2D" uid="uid://uueumdif2xdp" path="res://assets/Dog4.png" id="2_tr612"]
+[ext_resource type="Texture2D" uid="uid://dm1nhx0kt71n0" path="res://assets/Dog5.png" id="3_7q7el"]
+[ext_resource type="Texture2D" uid="uid://cxxxvd1m7bjr3" path="res://assets/Dog6.png" id="4_5ttyh"]
+[ext_resource type="Texture2D" uid="uid://berwhhlnyg4wn" path="res://assets/Dog2.png" id="6_0swmd"]
+[ext_resource type="Texture2D" uid="uid://dpt703ulxxd47" path="res://assets/Dog3.png" id="7_vxr0e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w571t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ut3ce")
+"texture": ExtResource("2_tr612")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7q7el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ttyh")
 }],
 "loop": true,
-"name": &"default",
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ut3ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0swmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vxr0e")
+}],
+"loop": true,
+"name": &"front",
 "speed": 5.0
 }]
 
@@ -22,6 +47,7 @@ script = ExtResource("1_j5ffi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w571t")
+animation = &"back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -3)
