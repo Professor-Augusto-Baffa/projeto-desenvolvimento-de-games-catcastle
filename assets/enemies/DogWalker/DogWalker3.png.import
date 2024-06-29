@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtvo2ryb3la3l"
-path="res://.godot/imported/SlingBullet.png-b7b94f0b2434da10d418bac098d72f85.ctex"
+uid="uid://dpt703ulxxd47"
+path="res://.godot/imported/DogWalker3.png-8266dc57dccadf182866fdcc03c3978e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SlingBullet.png"
-dest_files=["res://.godot/imported/SlingBullet.png-b7b94f0b2434da10d418bac098d72f85.ctex"]
+source_file="res://assets/enemies/DogWalker/DogWalker3.png"
+dest_files=["res://.godot/imported/DogWalker3.png-8266dc57dccadf182866fdcc03c3978e.ctex"]
 
 [params]
 

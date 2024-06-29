@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat Castle", "Cat Castle.csproj", "{2575B118-D681-4156-888A-F65C2D6A156F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat Castle", "CatCastle.csproj", "{2575B118-D681-4156-888A-F65C2D6A156F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

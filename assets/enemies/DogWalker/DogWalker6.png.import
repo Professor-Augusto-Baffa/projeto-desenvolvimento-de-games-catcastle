@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6i256vm8n12d"
-path="res://.godot/imported/CatOne2.png-4ebda61954fde421e8542975f8d33db4.ctex"
+uid="uid://cxxxvd1m7bjr3"
+path="res://.godot/imported/DogWalker6.png-d58c2985f6116cc63f7bf3761b55596a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CatOne2.png"
-dest_files=["res://.godot/imported/CatOne2.png-4ebda61954fde421e8542975f8d33db4.ctex"]
+source_file="res://assets/enemies/DogWalker/DogWalker6.png"
+dest_files=["res://.godot/imported/DogWalker6.png-d58c2985f6116cc63f7bf3761b55596a.ctex"]
 
 [params]
 

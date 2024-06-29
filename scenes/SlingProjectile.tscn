@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsjs84ufjqisu"]
 
-[ext_resource type="Script" path="res://SlingProjectile.cs" id="1_fxltr"]
-[ext_resource type="Texture2D" uid="uid://dtvo2ryb3la3l" path="res://assets/SlingBullet.png" id="1_vrygt"]
+[ext_resource type="Script" path="res://scripts/SlingProjectile.cs" id="1_fxltr"]
+[ext_resource type="Texture2D" uid="uid://dtvo2ryb3la3l" path="res://assets/projectiles/SlingBullet.png" id="1_vrygt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6011"]
 radius = 5.0

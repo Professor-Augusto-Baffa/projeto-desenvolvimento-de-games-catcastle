@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://dyjaf721ykhb3"]
 
-[ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/Tiles.png" id="1_ojbrn"]
-[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://castle.tscn" id="2_8df5q"]
-[ext_resource type="Script" path="res://EnemySpawner.cs" id="4_35udq"]
-[ext_resource type="Script" path="res://PathFollower.cs" id="5_bqyn3"]
-[ext_resource type="PackedScene" uid="uid://clw5epgj16dst" path="res://mob2.tscn" id="5_yliyb"]
-[ext_resource type="PackedScene" uid="uid://ve00wchfsj8x" path="res://catOne.tscn" id="6_v364o"]
+[ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/map/Tiles.png" id="1_ojbrn"]
+[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/Castle.tscn" id="2_8df5q"]
+[ext_resource type="Script" path="res://scripts/EnemySpawner.cs" id="4_35udq"]
+[ext_resource type="Script" path="res://scripts/PathFollower.cs" id="5_bqyn3"]
+[ext_resource type="PackedScene" uid="uid://clw5epgj16dst" path="res://scenes/Enemy2.tscn" id="5_yliyb"]
+[ext_resource type="PackedScene" uid="uid://ve00wchfsj8x" path="res://scenes/CatSlingshot.tscn" id="6_v364o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h5bm"]
 texture = ExtResource("1_ojbrn")
@@ -27,7 +27,7 @@ _data = {
 }
 point_count = 6
 
-[node name="Map_2" type="Node2D"]
+[node name="Map2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_67csg")

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Mob : CharacterBody2D
+public partial class Enemy1 : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;

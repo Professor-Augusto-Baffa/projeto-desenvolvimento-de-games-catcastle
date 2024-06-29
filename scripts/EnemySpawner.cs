@@ -37,11 +37,13 @@ public partial class EnemySpawner : Node
 		var spawnPoint = GetNode<Marker2D>(SpawnPointPath);  // Get the spawn point node
 		var path2D = GetNode<Path2D>(Path2DPath);
 		//var pathFollow = GetNode<PathFollow2D>(PathFollowPath); 
-		var pathFollow = new PathFollow2D();
-		pathFollow.Loop = false;
+		var pathFollow = new PathFollow2D
+		{
+			Loop = false
+		};
 		path2D.AddChild(pathFollow); 
 		
-		var enemy = EnemyPrefab.Instantiate<Mob2>(); // Create an instance of the enemy
+		var enemy = EnemyPrefab.Instantiate<Enemy2>(); // Create an instance of the enemy
 		pathFollow.AddChild(enemy);
 		enemy.GlobalPosition = spawnPoint.GlobalPosition; // Set the enemy's position to the spawn point
 	}

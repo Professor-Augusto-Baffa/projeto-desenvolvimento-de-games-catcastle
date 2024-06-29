@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Mob2 : Area2D
+public partial class Enemy2 : Area2D
 {
 	public float Speed = 100.0f;
 	private AnimatedSprite2D animatedSprite;
@@ -30,10 +30,10 @@ public partial class Mob2 : Area2D
 			Vector2 movementVector = GlobalPosition - lastPosition;
 			UpdateAnimation(movementVector);
 			lastPosition = GlobalPosition;
-			// Check if the mob has reached the end of the path
+			// Check if the enemy has reached the end of the path
 			if (pathFollow.Progress >= pathLength)
 			{
-				QueueFree();  // Remove the mob from the scene
+				QueueFree();  // Remove the enemy from the scene
 			}
 		}
 		

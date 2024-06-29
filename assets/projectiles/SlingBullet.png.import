@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clr4yty4eb6dt"
-path="res://.godot/imported/CatOne1.png-79d19c0d6430b508bcc88febfc13936a.ctex"
+uid="uid://dtvo2ryb3la3l"
+path="res://.godot/imported/SlingBullet.png-74886089caf5c029d41835546454b768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CatOne1.png"
-dest_files=["res://.godot/imported/CatOne1.png-79d19c0d6430b508bcc88febfc13936a.ctex"]
+source_file="res://assets/projectiles/SlingBullet.png"
+dest_files=["res://.godot/imported/SlingBullet.png-74886089caf5c029d41835546454b768.ctex"]
 
 [params]
 

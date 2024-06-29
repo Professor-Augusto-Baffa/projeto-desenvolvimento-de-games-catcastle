@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm1nhx0kt71n0"
-path="res://.godot/imported/Dog5.png-19453625e39a9000066852e44c6c69a5.ctex"
+uid="uid://clr4yty4eb6dt"
+path="res://.godot/imported/CatSlingshot1.png-c79f410a2536bec9b3b901359d4b9da2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dog5.png"
-dest_files=["res://.godot/imported/Dog5.png-19453625e39a9000066852e44c6c69a5.ctex"]
+source_file="res://assets/allies/CatSlingshot/CatSlingshot1.png"
+dest_files=["res://.godot/imported/CatSlingshot1.png-c79f410a2536bec9b3b901359d4b9da2.ctex"]
 
 [params]
 

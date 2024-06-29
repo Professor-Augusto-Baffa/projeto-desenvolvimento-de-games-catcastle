@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://ve00wchfsj8x"]
 
-[ext_resource type="Script" path="res://CatOne.cs" id="1_4lk3t"]
-[ext_resource type="Texture2D" uid="uid://clr4yty4eb6dt" path="res://assets/CatOne1.png" id="1_m7qw6"]
-[ext_resource type="Texture2D" uid="uid://c6i256vm8n12d" path="res://assets/CatOne2.png" id="2_ktm06"]
-[ext_resource type="Texture2D" uid="uid://wa46mr83nihe" path="res://assets/CatOne3.png" id="3_jk2s1"]
+[ext_resource type="Script" path="res://scripts/CatSlingshot.cs" id="1_4lk3t"]
+[ext_resource type="Texture2D" uid="uid://clr4yty4eb6dt" path="res://assets/allies/CatSlingshot/CatSlingshot1.png" id="1_m7qw6"]
+[ext_resource type="Texture2D" uid="uid://c6i256vm8n12d" path="res://assets/allies/CatSlingshot/CatSlingshot2.png" id="2_ktm06"]
+[ext_resource type="Texture2D" uid="uid://wa46mr83nihe" path="res://assets/allies/CatSlingshot/CatSlingshot3.png" id="3_jk2s1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_drg0e"]
 animations = [{
@@ -33,7 +33,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbm2d"]
 size = Vector2(43, 67)
 
-[node name="CatOne" type="Area2D"]
+[node name="CatSlingshot" type="Area2D"]
 script = ExtResource("1_4lk3t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

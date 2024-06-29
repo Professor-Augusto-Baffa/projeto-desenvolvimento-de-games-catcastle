@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqnt57gpf8lo2"
-path="res://.godot/imported/Castle5.png-f03f20b4ca520851646a1638e637bf49.ctex"
+path="res://.godot/imported/Castle5.png-b513130097e0f561470c267d27b39615.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Castle5.png"
-dest_files=["res://.godot/imported/Castle5.png-f03f20b4ca520851646a1638e637bf49.ctex"]
+source_file="res://assets/castle/Castle5.png"
+dest_files=["res://.godot/imported/Castle5.png-b513130097e0f561470c267d27b39615.ctex"]
 
 [params]
 
