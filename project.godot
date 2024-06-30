@@ -10,14 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Cat Castle"
+config/name="CatCastle"
 run/main_scene="res://scenes/Map2.tscn"
-config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.2", "4.2.1", "C#", "GL Compatibility")
+config/icon="res://assets/icon.svg"
 
 [dotnet]
 
-project/assembly_name="Cat Castle"
+project/assembly_name="CatCastle"
 
 [rendering]
 
