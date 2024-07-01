@@ -84,9 +84,14 @@ public partial class Map1 : Node2D
 			turretInstance.GlobalPosition = position;
 			AddChild(turretInstance);
 			
-			if (turretInstance is CatSlingshot turret)
+			if (turretInstance is CatSlingshot catSlingshot)
 			{
-				turret.IsPlaced = true;
+				catSlingshot.IsPlaced = true;
+			}
+			
+			if (turretInstance is CatSword catSword)
+			{
+				catSword.IsPlaced = true;
 			}
 
 			// Increment the turret counter

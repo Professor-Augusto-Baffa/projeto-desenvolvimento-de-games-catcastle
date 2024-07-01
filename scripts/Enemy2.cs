@@ -8,6 +8,9 @@ public partial class Enemy2 : Area2D
 	private Vector2 lastPosition;
 	private PathFollow2D pathFollow;
 	private float pathLength;
+	
+	[Export]
+	public int Health = 10;
 
 	public override void _Ready()
 	{
@@ -38,6 +41,22 @@ public partial class Enemy2 : Area2D
 		}
 	}
 	
+	public void TakeDamage(int amount)
+	{
+		Health -= amount;
+		GD.Print("Enemy3 health: ", Health);
+		if (Health <= 0)
+		{
+			Die();
+		}
+	}
+
+	private void Die()
+	{
+		GD.Print("Enemy3 died: ", Name);
+		QueueFree();
+	}
+	
 	private void OnBodyEntered(Node body)
 	{
 		GD.Print("Collision detected with: " + body.Name); // Debugging statement
@@ -46,7 +65,8 @@ public partial class Enemy2 : Area2D
 		{
 			GD.Print("Collided with projectile: " + body.Name); // Debugging statement
 			body.QueueFree(); // Remove the projectile
-			QueueFree(); // Remove the mob
+			//QueueFree(); // Remove the mob
+			TakeDamage(10);
 		}
 	}
 
