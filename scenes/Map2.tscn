@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dyjaf721ykhb3"]
 
 [ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/map/tiles.png" id="1_ojbrn"]
-[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/Castle.tscn" id="2_8df5q"]
+[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/castle.tscn" id="2_8df5q"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.cs" id="4_35udq"]
 [ext_resource type="Script" path="res://scripts/PathFollower.cs" id="5_bqyn3"]
 [ext_resource type="PackedScene" uid="uid://clw5epgj16dst" path="res://scenes/Enemy2.tscn" id="5_yliyb"]
@@ -58,4 +58,4 @@ script = ExtResource("5_bqyn3")
 PathFollowPath = NodePath("../Path2D/PathMover")
 
 [node name="Area2D" parent="." instance=ExtResource("6_v364o")]
-position = Vector2(754, 344)
+position = Vector2(86, 352)

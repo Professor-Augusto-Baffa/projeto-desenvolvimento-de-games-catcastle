@@ -39,6 +39,18 @@ public partial class Enemy2 : Area2D
 		
 		
 	}
+	
+	private void OnBodyEntered(Node body)
+	{
+		GD.Print("Collision detected with: " + body.Name); // Debugging statement
+
+		if (body is SlingProjectile)
+		{
+			GD.Print("Collided with projectile: " + body.Name); // Debugging statement
+			body.QueueFree(); // Remove the projectile
+			QueueFree(); // Remove the mob
+		}
+	}
 
 	private void UpdateAnimation(Vector2 movementVector)
 	{

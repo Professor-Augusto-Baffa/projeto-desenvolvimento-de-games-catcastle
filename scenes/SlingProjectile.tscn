@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6011"]
 radius = 5.0
 
-[node name="SlingProjectile" type="Area2D"]
+[node name="SlingProjectile" type="CharacterBody2D"]
 script = ExtResource("1_fxltr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
