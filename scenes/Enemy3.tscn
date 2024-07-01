@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2jo78yhm8sed"]
+
+[ext_resource type="Texture2D" uid="uid://dhfu463531gna" path="res://assets/enemies/DogTank/CACHORRO_tanque.png" id="1_iqv3a"]
+[ext_resource type="Script" path="res://scripts/Enemy3.cs" id="1_u28so"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i107e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqv3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_toed6"]
+radius = 31.0
+height = 78.0
+
+[node name="Enemy3" type="Area2D" groups=["Enemies"]]
+script = ExtResource("1_u28so")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+sprite_frames = SubResource("SpriteFrames_i107e")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_toed6")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

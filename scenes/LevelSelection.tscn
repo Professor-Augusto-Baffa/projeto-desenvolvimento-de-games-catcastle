@@ -32,7 +32,7 @@ position = Vector2(72, 488)
 rotation = 0.397079
 script = ExtResource("3_gtg2p")
 
-[node name="LevelSelectionCastle" type="Area2D" parent="Path2D/PathFollow2D"]
+[node name="LevelSelectionCastle" type="Area2D" parent="Path2D/PathFollow2D" groups=["Castle"]]
 script = ExtResource("3_d1vbg")
 
 [node name="CastleCollision" type="CollisionPolygon2D" parent="Path2D/PathFollow2D/LevelSelectionCastle"]

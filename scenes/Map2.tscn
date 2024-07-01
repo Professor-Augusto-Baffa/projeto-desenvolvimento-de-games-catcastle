@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyjaf721ykhb3"]
+[gd_scene load_steps=13 format=3 uid="uid://dyjaf721ykhb3"]
 
+[ext_resource type="Script" path="res://scripts/Map2.cs" id="1_h82pv"]
 [ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/map/tiles.png" id="1_ojbrn"]
 [ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/castle.tscn" id="2_8df5q"]
 [ext_resource type="Script" path="res://scripts/EnemySpawner.cs" id="4_35udq"]
 [ext_resource type="Script" path="res://scripts/PathFollower.cs" id="5_bqyn3"]
 [ext_resource type="PackedScene" uid="uid://clw5epgj16dst" path="res://scenes/Enemy2.tscn" id="5_yliyb"]
 [ext_resource type="PackedScene" uid="uid://ve00wchfsj8x" path="res://scenes/CatSlingshot.tscn" id="6_v364o"]
+[ext_resource type="Script" path="res://scripts/TurretSelection.cs" id="9_a6btr"]
+[ext_resource type="Texture2D" uid="uid://clr4yty4eb6dt" path="res://assets/allies/CatSlingshot/CatSlingshot1.png" id="9_x4t34"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h5bm"]
 texture = ExtResource("1_ojbrn")
@@ -28,6 +31,8 @@ _data = {
 point_count = 6
 
 [node name="Map2" type="Node2D"]
+script = ExtResource("1_h82pv")
+TurretScene = ExtResource("6_v364o")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_67csg")
@@ -57,5 +62,24 @@ Path2DPath = NodePath("../Path2D")
 script = ExtResource("5_bqyn3")
 PathFollowPath = NodePath("../Path2D/PathMover")
 
-[node name="Area2D" parent="." instance=ExtResource("6_v364o")]
-position = Vector2(86, 352)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TurretSelection" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 104.0
+grow_horizontal = 0
+script = ExtResource("9_a6btr")
+TurretScene = ExtResource("6_v364o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TurretSelection"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PreviewTurret" type="TextureRect" parent="CanvasLayer/TurretSelection/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_x4t34")

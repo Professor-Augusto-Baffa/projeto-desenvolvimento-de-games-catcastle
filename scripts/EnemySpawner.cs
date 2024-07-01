@@ -43,7 +43,7 @@ public partial class EnemySpawner : Node
 		};
 		path2D.AddChild(pathFollow); 
 		
-		var enemy = EnemyPrefab.Instantiate<Enemy2>(); // Create an instance of the enemy
+		var enemy = EnemyPrefab.Instantiate<Area2D>(); // Create an instance of the enemy
 		pathFollow.AddChild(enemy);
 		enemy.GlobalPosition = spawnPoint.GlobalPosition; // Set the enemy's position to the spawn point
 	}

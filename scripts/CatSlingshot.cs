@@ -14,6 +14,8 @@ public partial class CatSlingshot : Area2D
 	private Node2D currentTarget;
 	private AnimatedSprite2D animatedSprite;
 	
+	public bool IsPlaced { get; set; } = false;
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -32,7 +34,7 @@ public partial class CatSlingshot : Area2D
 	{
 		fireCooldown -= (float)delta;
 
-		if (currentTarget != null && fireCooldown <= 0)
+		if (currentTarget != null && fireCooldown <= 0 && IsPlaced)
 		{
 			FireProjectile();
 			fireCooldown = FireInterval;
