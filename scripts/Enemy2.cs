@@ -36,8 +36,6 @@ public partial class Enemy2 : Area2D
 				QueueFree();  // Remove the enemy from the scene
 			}
 		}
-		
-		
 	}
 	
 	private void OnBodyEntered(Node body)

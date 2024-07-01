@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4n4sj0n8qwuy"]
+
+[ext_resource type="Texture2D" uid="uid://bxh2q8gtojrsk" path="res://assets/buttons/botão_INICIAR.png" id="1_4li8m"]
+[ext_resource type="Script" path="res://scripts/SettingsButton.cs" id="1_gatlg"]
+[ext_resource type="Script" path="res://scripts/StartButton.cs" id="1_hpxwu"]
+[ext_resource type="Script" path="res://scripts/LoadButton.cs" id="2_1cuki"]
+[ext_resource type="Script" path="res://scripts/QuitButton.cs" id="2_yvj61"]
+[ext_resource type="Texture2D" uid="uid://b06rbbcpryxpb" path="res://assets/buttons/botão_CARREGAR.png" id="3_lnkbc"]
+[ext_resource type="Texture2D" uid="uid://khh16f0tlnhb" path="res://assets/buttons/botão_CONFIGURAÇÃO.png" id="5_j6ad6"]
+[ext_resource type="Texture2D" uid="uid://b5vdxwrgrjrh1" path="res://assets/buttons/botão_SAIR.png" id="7_syduv"]
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonGroup" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_right = 438.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="StartButton" type="VBoxContainer" parent="ButtonGroup"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="StartButton" type="TextureButton" parent="ButtonGroup/StartButton"]
+custom_minimum_size = Vector2(80, 150)
+layout_mode = 2
+texture_normal = ExtResource("1_4li8m")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_hpxwu")
+
+[node name="LoadButton" type="VBoxContainer" parent="ButtonGroup"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="LoadButton" type="TextureButton" parent="ButtonGroup/LoadButton"]
+custom_minimum_size = Vector2(80, 150)
+layout_mode = 2
+texture_normal = ExtResource("3_lnkbc")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_1cuki")
+
+[node name="SettingsButton" type="VBoxContainer" parent="ButtonGroup"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="SettingsButton" type="TextureButton" parent="ButtonGroup/SettingsButton"]
+custom_minimum_size = Vector2(80, 150)
+layout_mode = 2
+texture_normal = ExtResource("5_j6ad6")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_gatlg")
+
+[node name="QuitButton" type="VBoxContainer" parent="ButtonGroup"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="QuitButton" type="TextureButton" parent="ButtonGroup/QuitButton"]
+custom_minimum_size = Vector2(80, 150)
+layout_mode = 2
+texture_normal = ExtResource("7_syduv")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_yvj61")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 638.0
+offset_top = -7.0
+offset_right = 1022.0
+offset_bottom = 289.0
+theme_override_font_sizes/font_size = 61
+text = "CatiKuesti"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0
+access = 2
