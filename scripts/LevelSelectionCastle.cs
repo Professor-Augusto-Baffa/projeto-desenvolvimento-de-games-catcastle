@@ -3,13 +3,33 @@ using System;
 
 public partial class LevelSelectionCastle : Area2D
 {
-	// Called when the node enters the scene tree for the first time.
+	public String SceneToLoad = "res://scenes/";
+	
 	public override void _Ready()
-	{
+	{	
+		this.Connect("area_entered", new Callable(this, nameof(OnAreaEntered)));
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	private void OnAreaEntered(Node area)
 	{
+		GD.Print("Collision detected with: " + area.Name);
+		switch (area.Name)
+		{
+			case "Level1Area":
+				//GetTree().ChangeSceneToFile(SceneToLoad + "Map2.tscn");
+				break;
+			case "Level2Area":
+				//GetTree().ChangeSceneToFile(SceneToLoad + "Map2.tscn");
+				break;
+			case "Level3Area":
+				GetTree().ChangeSceneToFile(SceneToLoad + "Map2.tscn");
+				break;
+			case "Level4Area":
+				GetTree().ChangeSceneToFile(SceneToLoad + "Map2.tscn");
+				break;
+			default:
+				GD.Print("No matching scene for this Area");
+				break;
+		}
 	}
 }
