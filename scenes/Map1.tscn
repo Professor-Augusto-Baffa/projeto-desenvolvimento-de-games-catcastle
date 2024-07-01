@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8s6cdcce1204"]
+[gd_scene load_steps=11 format=3 uid="uid://c8s6cdcce1204"]
 
-[ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/map/Tiles.png" id="1_44jkv"]
+[ext_resource type="Texture2D" uid="uid://xqf0rptsu6bo" path="res://assets/map/tiles.png" id="1_44jkv"]
 [ext_resource type="Script" path="res://scripts/Map.cs" id="1_d86oy"]
-[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/Castle.tscn" id="2_wr0fs"]
-[ext_resource type="PackedScene" uid="uid://p42dim3rg356" path="res://scenes/Enemy1.tscn" id="4_gtspy"]
+[ext_resource type="PackedScene" uid="uid://rsi0ph1kv6qw" path="res://scenes/castle.tscn" id="2_wr0fs"]
+[ext_resource type="Script" path="res://scripts/TurretSelection2.cs" id="5_0rb51"]
+[ext_resource type="PackedScene" uid="uid://c03mx8scehpq1" path="res://scenes/CatSword.tscn" id="5_uqsi8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2aoaj"]
 texture = ExtResource("1_44jkv")
@@ -65,10 +66,6 @@ curve = SubResource("Curve2D_5ck3a")
 position = Vector2(898, 633)
 rotation = -1.66486
 
-[node name="Mob" parent="PathThree/PathFollow2D" instance=ExtResource("4_gtspy")]
-position = Vector2(662.098, -267.999)
-rotation = 1.66486
-
 [node name="PathTwo" type="Path2D" parent="."]
 curve = SubResource("Curve2D_g50dc")
 
@@ -82,3 +79,30 @@ curve = SubResource("Curve2D_yua5r")
 [node name="PathFollow2D" type="PathFollow2D" parent="PathOne"]
 position = Vector2(575, 3)
 rotation = 1.5708
+
+[node name="CatSword" parent="." instance=ExtResource("5_uqsi8")]
+position = Vector2(321, 411)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TurretSelection2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_0rb51")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TurretSelection2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PreviewTurret1" type="TextureRect" parent="CanvasLayer/TurretSelection2/VBoxContainer"]
+layout_mode = 2
+
+[node name="PreviewTurret2" type="TextureRect" parent="CanvasLayer/TurretSelection2/VBoxContainer"]
+layout_mode = 2

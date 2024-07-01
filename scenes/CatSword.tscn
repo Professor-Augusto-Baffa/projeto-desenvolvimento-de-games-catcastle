@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://c03mx8scehpq1"]
+
+[ext_resource type="Texture2D" uid="uid://c2mls4pupt0xf" path="res://assets/allies/CatSword/Gato_Cinza_LADO.png" id="1_5v7jd"]
+[ext_resource type="Texture2D" uid="uid://do0hlrf0ooi2b" path="res://assets/allies/CatSword/Gato_Cinza_LADO_ATAQUE.png" id="2_6g5s0"]
+[ext_resource type="Texture2D" uid="uid://bnug1kes1e32v" path="res://assets/allies/CatSword/Gato_Cinza_LADO_ATAQUE_2.png" id="3_f06yd"]
+[ext_resource type="Texture2D" uid="uid://cp2iybqtwbdvn" path="res://assets/allies/CatSword/Gato_Cinza_FRENTE.png" id="4_n5bpc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d010w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5v7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6g5s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f06yd")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n5bpc")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4u2m"]
+radius = 33.0
+height = 94.0
+
+[node name="CatSword" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_d010w")
+animation = &"attack"
+frame = 1
+frame_progress = 0.343912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q4u2m")
