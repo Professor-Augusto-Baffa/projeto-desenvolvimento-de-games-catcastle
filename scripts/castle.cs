@@ -3,32 +3,55 @@ using System;
 
 public partial class Castle : Area2D
 {
-	public int Health { get; set; } = 100;
-	
-	// Called when the node enters the scene tree for the first time.
+	[Export]
+	public int MaxHealth = 100;
+	public int CurrentHealth;
+
+	private Label _healthLabel;
+
 	public override void _Ready()
 	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		CurrentHealth = MaxHealth;
+		_healthLabel = GetNode<Label>("../CanvasLayer2/CastleHealthLabel");
+		UpdateHealthLabel();
 	}
 	
-	 public void TakeDamage(int amount)
+	private void OnAreaEntered(Area2D area)
 	{
-		Health -= amount;
-		GD.Print($"Health remaining: {Health}");
+		if (area is Enemy2 enemy2)
+		{
+			TakeDamage(10);
+			enemy2.QueueFree(); // Remove the enemy after it hits the castle
+		}
+		else if (area is Enemy3 enemy3)
+		{
+			TakeDamage(20);
+			enemy3.QueueFree(); // Remove the enemy after it hits the castle
+		}
+	}
 
-		if (Health <= 0)
+	public void TakeDamage(int amount)
+	{
+		CurrentHealth -= amount;
+		if (CurrentHealth < 0) CurrentHealth = 0;
+		UpdateHealthLabel();
+
+		if (CurrentHealth <= 0)
 		{
 			Die();
 		}
 	}
 
+	private void UpdateHealthLabel()
+	{
+		_healthLabel.Text = $"Castle Health: {CurrentHealth}";
+	}
+
 	private void Die()
 	{
-		QueueFree();  // Destroys the object
-		// Additional logic for game over or damage animation can be added here
+		GD.Print("Castle has been destroyed!");
+		// Handle the castle destruction logic here
 	}
 }
+
+

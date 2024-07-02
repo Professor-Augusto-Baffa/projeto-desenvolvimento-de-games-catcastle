@@ -26,7 +26,7 @@ sources/0 = SubResource("TileSetAtlasSource_6h5bm")
 
 [sub_resource type="Curve2D" id="Curve2D_pj1t2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 80, 6, 0, 0, 0, 0, 80, 304, 0, 0, 0, 0, 398, 302, 0, 0, 0, 0, 399, 209, 0, 0, 0, 0, 799, 206, 0, 0, 0, 0, 796, 398)
+"points": PackedVector2Array(0, 0, 0, 0, 80, 6, 0, 0, 0, 0, 80, 304, 0, 0, 0, 0, 398, 302, 0, 0, 0, 0, 399, 209, 0, 0, 0, 0, 799, 206, 0, 0, 0, 0, 798, 414)
 }
 point_count = 6
 
@@ -83,3 +83,12 @@ offset_bottom = 40.0
 [node name="PreviewTurret" type="TextureRect" parent="CanvasLayer/TurretSelection/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("9_x4t34")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="CastleHealthLabel" type="Label" parent="CanvasLayer2"]
+offset_left = 52.0
+offset_top = 563.0
+offset_right = 92.0
+offset_bottom = 586.0
+text = "teste"

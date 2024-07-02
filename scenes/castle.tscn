@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://scripts/Castle.cs" id="1_xqlt1"]
 [ext_resource type="Texture2D" uid="uid://c08x33u8ioqnp" path="res://assets/map/levelSelectionCastle.png" id="2_4x3jo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnf1a"]
-size = Vector2(1486.94, 1435.33)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2noxw"]
+radius = 521.25
+height = 1200.0
 
 [node name="Castle" type="Area2D"]
 scale = Vector2(0.18, 0.18)
@@ -15,8 +16,9 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_4x3jo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-37.9167, -123.222)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_jnf1a")
+position = Vector2(-61.1111, -55.5555)
+shape = SubResource("CapsuleShape2D_2noxw")
 
 [node name="TargetPoint" type="Marker2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]

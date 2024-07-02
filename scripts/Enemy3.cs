@@ -3,7 +3,7 @@ using System;
 
 public partial class Enemy3 : Area2D
 {
-	public float Speed = 100.0f;
+	public float Speed = 50.0f;
 	private AnimatedSprite2D animatedSprite;
 	private Vector2 lastPosition;
 	private PathFollow2D pathFollow;
