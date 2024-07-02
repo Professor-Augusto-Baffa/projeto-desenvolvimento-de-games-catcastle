@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4n4sj0n8qwuy"]
+[gd_scene load_steps=12 format=3 uid="uid://d4n4sj0n8qwuy"]
 
 [ext_resource type="Texture2D" uid="uid://bxh2q8gtojrsk" path="res://assets/buttons/botão_INICIAR.png" id="1_4li8m"]
 [ext_resource type="Script" path="res://scripts/SettingsButton.cs" id="1_gatlg"]
+[ext_resource type="Texture2D" uid="uid://c5fhdrxrbnjka" path="res://assets/background/BACKGROUND_ROXO.png" id="1_glbuk"]
 [ext_resource type="Script" path="res://scripts/StartButton.cs" id="1_hpxwu"]
 [ext_resource type="Script" path="res://scripts/LoadButton.cs" id="2_1cuki"]
 [ext_resource type="Script" path="res://scripts/QuitButton.cs" id="2_yvj61"]
 [ext_resource type="Texture2D" uid="uid://b06rbbcpryxpb" path="res://assets/buttons/botão_CARREGAR.png" id="3_lnkbc"]
 [ext_resource type="Texture2D" uid="uid://khh16f0tlnhb" path="res://assets/buttons/botão_CONFIGURAÇÃO.png" id="5_j6ad6"]
 [ext_resource type="Texture2D" uid="uid://b5vdxwrgrjrh1" path="res://assets/buttons/botão_SAIR.png" id="7_syduv"]
+[ext_resource type="Script" path="res://scenes/SettingsPopup.cs" id="9_uhkpa"]
+[ext_resource type="Texture2D" uid="uid://c7aqagfq3hd78" path="res://assets/LOGO.png" id="10_wu3ra"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = 15
@@ -15,6 +18,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_glbuk")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="ButtonGroup" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -71,19 +77,37 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_yvj61")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="TextureRect" parent="."]
+clip_contents = true
 layout_mode = 0
-offset_left = 638.0
-offset_top = -7.0
-offset_right = 1022.0
-offset_bottom = 289.0
-theme_override_font_sizes/font_size = 61
-text = "CatiKuesti"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 240.0
+offset_right = 1392.0
+offset_bottom = 648.0
+texture = ExtResource("10_wu3ra")
+expand_mode = 3
+stretch_mode = 6
 
 [node name="FileDialog" type="FileDialog" parent="."]
 title = "Open a File"
 ok_button_text = "Open"
 file_mode = 0
 access = 2
+
+[node name="SettingsPopup" type="PopupMenu" parent="."]
+size = Vector2i(250, 250)
+min_size = Vector2i(250, 250)
+script = ExtResource("9_uhkpa")
+
+[node name="VboxContainer" type="VBoxContainer" parent="SettingsPopup"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VolumeLabel" type="Label" parent="SettingsPopup/VboxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsPopup/VboxContainer"]
+layout_mode = 2
+
+[node name="ScreenModeDropdown" type="OptionButton" parent="SettingsPopup/VboxContainer"]
+layout_mode = 2

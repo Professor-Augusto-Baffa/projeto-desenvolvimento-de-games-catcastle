@@ -1,15 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdyrkw87wpw7v"]
 
-[ext_resource type="Texture2D" uid="uid://f1qs1sv121ld" path="res://assets/map/levelSelectionMap.png" id="1_eg7bn"]
+[ext_resource type="Texture2D" uid="uid://xgjc7sqnlirs" path="res://assets/map/mapa.png" id="1_ygx10"]
 [ext_resource type="Texture2D" uid="uid://c08x33u8ioqnp" path="res://assets/map/levelSelectionCastle.png" id="2_v1tuf"]
 [ext_resource type="Script" path="res://scripts/LevelSelectionCastle.cs" id="3_d1vbg"]
 [ext_resource type="Script" path="res://scripts/LevelSelectorPath.cs" id="3_gtg2p"]
 
 [sub_resource type="Curve2D" id="Curve2D_3irov"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 72, 488, 0, 0, 0, 0, 320, 592, 0, 0, 0, 0, 504, 536, 0, 0, 0, 0, 712, 616, 0, 0, 0, 0, 1008, 496, 0, 0, 0, 0, 880, 448, 49.9467, 19.0273, -49.9467, -19.0273, 816, 384, 0, 0, 0, 0, 720, 376, 0, 0, 0, 0, 184, 376, 0, 0, 0, 0, 112, 344, 0, 0, 0, 0, 296, 272, 0, 0, 0, 0, 735.463, 264.048, 0, 0, 0, 0, 744, 264, 0, 0, 0, 0, 896, 192)
+"points": PackedVector2Array(0, 0, 0, 0, 2, 468, 0, 0, 0, 0, 264, 599, 0, 0, 0, 0, 475, 510, 0, 0, 0, 0, 699, 601, 0, 0, 0, 0, 981, 478, 0, 0, 0, 0, 877, 440, 49.9467, 19.0273, -49.9467, -19.0273, 807, 372, 0, 0, 0, 0, 729, 380, 0, 0, 0, 0, 110, 376, 0, 0, 0, 0, 241, 309, 0, 0, 0, 0, 681, 307, 0, 0, 0, 0, 892, 204)
 }
-point_count = 14
+point_count = 12
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ba68t"]
 
@@ -21,21 +21,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_eg7bn")
+texture = ExtResource("1_ygx10")
 expand_mode = 1
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_3irov")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(72, 488)
-rotation = 0.397079
+position = Vector2(2, 468)
+rotation = 0.463648
+loop = false
 script = ExtResource("3_gtg2p")
 
 [node name="LevelSelectionCastle" type="Area2D" parent="Path2D/PathFollow2D" groups=["Castle"]]
 script = ExtResource("3_d1vbg")
 
 [node name="CastleCollision" type="CollisionPolygon2D" parent="Path2D/PathFollow2D/LevelSelectionCastle"]
+visible = false
 position = Vector2(17.9084, -40.0411)
 rotation = -0.383972
 scale = Vector2(0.0725646, 0.081)
@@ -49,11 +51,11 @@ texture = ExtResource("2_v1tuf")
 [node name="Level1Area" type="Area2D" parent="."]
 
 [node name="Level1Collision" type="CollisionShape2D" parent="Level1Area"]
-position = Vector2(545, 536)
+position = Vector2(547, 533)
 shape = SubResource("CircleShape2D_ba68t")
 
 [node name="Level1Point" type="Marker2D" parent="Level1Area" groups=["StopPositions"]]
-position = Vector2(540, 549)
+position = Vector2(546, 534)
 
 [node name="Level2Area" type="Area2D" parent="."]
 
@@ -67,17 +69,30 @@ position = Vector2(788, 374)
 [node name="Level3Area" type="Area2D" parent="."]
 
 [node name="Level3Collision" type="CollisionShape2D" parent="Level3Area"]
-position = Vector2(496, 286)
+position = Vector2(494, 308)
 shape = SubResource("CircleShape2D_ba68t")
 
 [node name="Level3Point" type="Marker2D" parent="Level3Area" groups=["StopPositions"]]
-position = Vector2(495, 264)
+position = Vector2(494, 298)
 
 [node name="Level4Area" type="Area2D" parent="."]
 
 [node name="Level4Collision" type="CollisionShape2D" parent="Level4Area"]
-position = Vector2(916, 188)
+position = Vector2(884, 209)
 shape = SubResource("CircleShape2D_ba68t")
 
 [node name="Level4Point" type="Marker2D" parent="Level4Area" groups=["StopPositions"]]
-position = Vector2(894, 187)
+position = Vector2(883, 206)
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+title = "Olha só!"
+
+[node name="Label" type="Label" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 209.0
+text = "Parece que nao tem ninguém aqui!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

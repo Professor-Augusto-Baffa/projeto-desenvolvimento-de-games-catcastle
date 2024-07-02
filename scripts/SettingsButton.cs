@@ -3,13 +3,17 @@ using System;
 
 public partial class SettingsButton : TextureButton
 {
-	// Called when the node enters the scene tree for the first time.
+	private PopupMenu popupSettings;
+
 	public override void _Ready()
 	{
+		popupSettings = GetNode<PopupMenu>("/root/Control/SettingsPopup");
+		this.Connect("pressed", new Callable(this, nameof(OnSettingsButtonPressed)));
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	private void OnSettingsButtonPressed()
 	{
+		popupSettings.Exclusive = true;
+		popupSettings.PopupCentered();
 	}
 }
