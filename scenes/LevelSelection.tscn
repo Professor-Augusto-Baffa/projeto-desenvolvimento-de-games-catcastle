@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdyrkw87wpw7v"]
 
-[ext_resource type="Texture2D" uid="uid://xgjc7sqnlirs" path="res://assets/map/mapa.png" id="1_ygx10"]
+[ext_resource type="Texture2D" uid="uid://ba7alx4nccmfh" path="res://assets/map/mapa.png" id="1_ygx10"]
 [ext_resource type="Texture2D" uid="uid://c08x33u8ioqnp" path="res://assets/map/levelSelectionCastle.png" id="2_v1tuf"]
 [ext_resource type="Script" path="res://scripts/LevelSelectionCastle.cs" id="3_d1vbg"]
 [ext_resource type="Script" path="res://scripts/LevelSelectorPath.cs" id="3_gtg2p"]
@@ -91,7 +91,7 @@ title = "Olha só!"
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 96.0
-offset_bottom = 209.0
+offset_bottom = 105.0
 text = "Parece que nao tem ninguém aqui!"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -17,6 +17,7 @@ stretch_mode = 5
 script = ExtResource("1_g0who")
 
 [node name="ButtonGroup" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 720.0
 offset_right = 1152.0
 offset_bottom = 648.0

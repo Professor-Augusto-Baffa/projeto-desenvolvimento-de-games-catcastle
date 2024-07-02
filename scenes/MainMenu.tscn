@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b06rbbcpryxpb" path="res://assets/buttons/botão_CARREGAR.png" id="3_lnkbc"]
 [ext_resource type="Texture2D" uid="uid://khh16f0tlnhb" path="res://assets/buttons/botão_CONFIGURAÇÃO.png" id="5_j6ad6"]
 [ext_resource type="Texture2D" uid="uid://b5vdxwrgrjrh1" path="res://assets/buttons/botão_SAIR.png" id="7_syduv"]
-[ext_resource type="Script" path="res://scenes/SettingsPopup.cs" id="9_uhkpa"]
+[ext_resource type="Script" path="res://scripts/SettingsPopup.cs" id="9_uhkpa"]
 [ext_resource type="Texture2D" uid="uid://c7aqagfq3hd78" path="res://assets/LOGO.png" id="10_wu3ra"]
 
 [node name="Control" type="TextureRect"]
