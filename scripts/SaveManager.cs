@@ -5,15 +5,15 @@ public partial class SaveManager : Node
 {
 		public void SaveGame(int levelNumber, int playerHealth, int score)
 		{
-			var saveFile = new File();
-			saveFile.Open("user://save_game.save", File.ModeFlags.Write);
+			//var saveFile = new File();
+			//saveFile.Open("user://save_game.save", File.ModeFlags.Write);
 
 			// Salvando os dados do jogo
-			saveFile.StoreVar("levelNumber", levelNumber);
-			saveFile.StoreVar("playerHealth", playerHealth);
-			saveFile.StoreVar("score", score);
+			//saveFile.StoreVar("levelNumber", levelNumber);
+			//saveFile.StoreVar("playerHealth", playerHealth);
+			//saveFile.StoreVar("score", score);
 
-			saveFile.Close();
+			//saveFile.Close();
 		}
 	
 	// Called when the node enters the scene tree for the first time.
